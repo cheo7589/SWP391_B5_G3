@@ -1,4 +1,4 @@
-/*******************************************************************************
+4.0.0-Beta
 * File Name:   main.c
 *
 * Description: This is the source code for the Empty Application Example
@@ -7,8 +7,7 @@
 * Related Document: See README.md
 *
 *
-********************************************************************************
-* Copyright 2021-2023, Cypress Semiconductor Corporation (an Infineon company) or
+4.0.0-Beta
 * an affiliate of Cypress Semiconductor Corporation.  All rights reserved.
 *
 * This software, including source code, documentation and related
@@ -39,51 +38,7 @@
 * of such system or application assumes all risk of such use and in doing
 * so agrees to indemnify Cypress against all liability.
 *******************************************************************************/
-
-/*******************************************************************************
-* Header Files
-*******************************************************************************/
-#include "cyhal.h"
-#include "cybsp.h"
-
-/*******************************************************************************
-* Macros
-*******************************************************************************/
-
-
-/*******************************************************************************
-* Global Variables
-*******************************************************************************/
-
-
-/*******************************************************************************
-* Function Prototypes
-*******************************************************************************/
-
-
-/*******************************************************************************
-* Function Definitions
-*******************************************************************************/
-
-/*******************************************************************************
-* Function Name: main
-********************************************************************************
-* Summary:
-* This is the main function for CPU. It...
-*    1.
-*    2.
-*
-* Parameters:
-*  void
-*
-* Return:
-*  int
-*
-*******************************************************************************/
-int main(void)
-{
-    cy_rslt_t result;
-
+4.0.0-Beta
 #if defined (CY_DEVICE_SECURE)
     cyhal_wdt_t wdt_obj;
 
@@ -92,17 +47,12 @@ int main(void)
     CY_ASSERT(CY_RSLT_SUCCESS == result);
     cyhal_wdt_free(&wdt_obj);
 #endif
-
-    /* Initialize the device and board peripherals */
-    result = cybsp_init();
-
-    /* Board init failed. Stop program execution */
+4.0.0-Beta
     if (result != CY_RSLT_SUCCESS)
     {
         CY_ASSERT(0);
     }
-
-    /* Enable global interrupts */
+4.0.0-Beta
     __enable_irq();
 
     for (;;)
